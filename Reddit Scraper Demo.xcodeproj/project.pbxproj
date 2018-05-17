@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92077DB920AD390900941AA9 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92077DB820AD390900941AA9 /* JSONParser.swift */; };
+		92077DBB20AD41B800941AA9 /* Subreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92077DBA20AD41B800941AA9 /* Subreddit.swift */; };
+		92077DBD20AD447400941AA9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92077DBC20AD447400941AA9 /* Post.swift */; };
 		92C971DE20AD20BA002F2D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C971DD20AD20BA002F2D52 /* AppDelegate.swift */; };
 		92C971E020AD20BA002F2D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C971DF20AD20BA002F2D52 /* ViewController.swift */; };
 		92C971E320AD20BA002F2D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C971E120AD20BA002F2D52 /* Main.storyboard */; };
 		92C971E520AD20BA002F2D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C971E420AD20BA002F2D52 /* Assets.xcassets */; };
 		92C971E820AD20BA002F2D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C971E620AD20BA002F2D52 /* LaunchScreen.storyboard */; };
+		92C971F020AD21F9002F2D52 /* ScraperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C971EF20AD21F9002F2D52 /* ScraperService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92077DB820AD390900941AA9 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		92077DBA20AD41B800941AA9 /* Subreddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subreddit.swift; sourceTree = "<group>"; };
+		92077DBC20AD447400941AA9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		92C971DA20AD20BA002F2D52 /* Reddit Scraper Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit Scraper Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C971DD20AD20BA002F2D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C971DF20AD20BA002F2D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,7 @@
 		92C971E420AD20BA002F2D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92C971E720AD20BA002F2D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92C971E920AD20BA002F2D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92C971EF20AD21F9002F2D52 /* ScraperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScraperService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				92C971E420AD20BA002F2D52 /* Assets.xcassets */,
 				92C971E620AD20BA002F2D52 /* LaunchScreen.storyboard */,
 				92C971E920AD20BA002F2D52 /* Info.plist */,
+				92C971EF20AD21F9002F2D52 /* ScraperService.swift */,
+				92077DB820AD390900941AA9 /* JSONParser.swift */,
+				92077DBA20AD41B800941AA9 /* Subreddit.swift */,
+				92077DBC20AD447400941AA9 /* Post.swift */,
 			);
 			path = "Reddit Scraper Demo";
 			sourceTree = "<group>";
@@ -137,6 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C971E020AD20BA002F2D52 /* ViewController.swift in Sources */,
+				92C971F020AD21F9002F2D52 /* ScraperService.swift in Sources */,
+				92077DB920AD390900941AA9 /* JSONParser.swift in Sources */,
+				92077DBD20AD447400941AA9 /* Post.swift in Sources */,
+				92077DBB20AD41B800941AA9 /* Subreddit.swift in Sources */,
 				92C971DE20AD20BA002F2D52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

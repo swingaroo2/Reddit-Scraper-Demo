@@ -16,11 +16,11 @@ class ViewController: UIViewController
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         let service = ScraperService()
         let displaySubreddit: (Subreddit?) -> () = { sub in
-            print((sub?.kind)!)
+            dump(sub?.posts)
         }
         service.getSubreddit("shield", displaySubreddit)
     }

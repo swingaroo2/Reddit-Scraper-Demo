@@ -41,7 +41,6 @@ class ScraperService: NSObject {
             {
                 print("Error: \(error.localizedDescription)")
             } else if let jsonData = data {
-                print("Got data!")
                 self.subreddit = JSONParser().parseSubredditJSONData(jsonData: jsonData)
                 DispatchQueue.main.async {
                     completion(self.subreddit)

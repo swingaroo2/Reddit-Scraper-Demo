@@ -11,9 +11,26 @@ import Foundation
 class Post: NSObject
 {
     var postDict:[String:Any]?
+
+    var id:String = ""
+    var subredditId:String = ""
+    var title:String = ""
+    var author:String = ""
     
-    init(postDict:[String:Any]?) {
-        self.postDict = postDict
-        super.init()
+    
+    static func createPostFromJSON(postJSON:[String:Any]?) -> Post? {
+        let post:Post = Post()
+        
+        if let json = postJSON
+        {
+            if let data = json["data"] as? [String:Any]
+            {
+                post.id = data["id"] as! String
+                post.subredditId = data["subreddit_id"] as! String
+                post.title = data["title"] as! String
+                post.author = data["author"] as! String
+            }
+        }
+        return post
     }
 }

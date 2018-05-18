@@ -9,21 +9,25 @@
 import Foundation
 
 class Subreddit: NSObject {
-    var kind:String?
-    var posts:[Post]?
+    var kind:String = ""
+    var posts:[Post] = []
     
-    static func createSubredditObjectWith(subredditDict:[String:Any]?) -> Subreddit?
+    static func createSubredditObjectWith(_ subredditDict:[String:Any]) -> Subreddit?
     {
-        guard let subredditDict = subredditDict else
+        let subreddit:Subreddit = Subreddit()
+        guard let kind = subredditDict["kind"] as? String else
         {
-            print("Bad dictionary")
+            print("kind not found")
             return nil
         }
-        let subreddit:Subreddit = Subreddit()
-        subreddit.kind = subredditDict["kind"] as? String
+        subreddit.kind = kind
         
-        // more initialization
-        subreddit.posts = subreddit.createPostsArrayFrom(subredditDict)
+        guard let posts = subreddit.createPostsArrayFrom(subredditDict) else
+        {
+            print("posts not found")
+            return nil
+        }
+        subreddit.posts = posts
         return subreddit
     }
     
@@ -39,8 +43,8 @@ class Subreddit: NSObject {
             {
                 return nil
             }
-            posts?.append(newPost)
+            posts.append(newPost)
         }
-        return nil
+        return posts
     }
 }

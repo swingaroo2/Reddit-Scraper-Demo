@@ -10,20 +10,26 @@ import Foundation
 
 class JSONParser : NSObject
 {
-    var json: [String:Any]?
+    var json: [String:Any] = [String:Any]()
     
     func parseSubredditJSONData(jsonData:Data) -> Subreddit?
     {
+        var subreddit = Subreddit()
         let rawJSON = try? JSONSerialization.jsonObject(with: jsonData, options: [])
         
         guard let json = rawJSON as? [String: Any] else
         {
-            print("Bad JSON")
+            print("bad JSON")
             return nil
         }
         self.json = json
         
-        let subreddit = Subreddit.createSubredditObjectWith(subredditDict: self.json)
+        guard let sub = Subreddit.createSubredditObjectWith(self.json) else
+        {
+            print("Subreddit object is nil")
+            return nil
+        }
+        subreddit = sub
         
         return subreddit
     }
